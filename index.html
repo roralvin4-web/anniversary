@@ -12,33 +12,30 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         body {
-            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
             height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            overflow: hidden;
         }
         .card {
-            background: rgba(255, 255, 255, 0.9);
-            padding: 40px 30px;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px 20px;
             border-radius: 20px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
             text-align: center;
             max-width: 400px;
             width: 90%;
-            position: relative;
         }
         .emoji {
-            font-size: 80px;
-            margin-bottom: 20px;
-            animation: bounce 1.5s infinite alternate;
+            font-size: 70px;
+            margin-bottom: 15px;
         }
         .text {
-            font-size: 18px;
+            font-size: 17px;
             color: #4a4a4a;
             line-height: 1.6;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
             min-height: 80px;
             display: flex;
             align-items: center;
@@ -54,15 +51,10 @@
             border-radius: 25px;
             cursor: pointer;
             box-shadow: 0 4px 10px rgba(255, 107, 129, 0.4);
-            transition: transform 0.2s, background-color 0.2s;
+            transition: transform 0.2s;
         }
         button:hover {
-            background-color: #ff4757;
             transform: scale(1.05);
-        }
-        @keyframes bounce {
-            0% { transform: translateY(0); }
-            100% { transform: translateY(-10px); }
         }
     </style>
 </head>
@@ -70,7 +62,7 @@
 
 <div class="card">
     <div class="emoji" id="emojiDisplay">🌹</div>
-    <div class="text" id="textDisplay">ချစ်တုံးလေးရေ ကိုးကို ကစုစုကို စိတ်ကောက်အောင်ထားတာဟုတ်ပါဘူးဗျာ ကိုးကိုမှာစီစဉ်ရှိပြီးသားပါဗျာ</div>
+    <div class="text" id="textDisplay">ချစ်တုံးလေးရေ ကိုးကို စုစုကို စိတ်ကောက်အောင်ထားထားတာမဟုတ်ပါဘူးဗျာ</div>
     <button onclick="nextStep()" id="nextBtn">ရှေ့ဆက်သွားရန် ❤️</button>
 </div>
 
@@ -78,15 +70,15 @@
     const steps = [
         {
             emoji: "✨",
-            text: "ဒီနေ့က ကိုးကိုနဲ့စုစုရဲ့ ၁ နှစ်နဲ့ ၈ လ (ရက်ပေါင်း ၆၀၀ ကျော်) ပြည့်တဲ့ Anniversary လေးပေါ့စုစုရယ်"
+            text: "ဒီနေ့က ကိုးကိုတို့ရဲ့  ချစ်သူသက်တမ်း ၁ နှစ်နဲ့ ၈ လ (ရက်ပေါင်း ၆၀၀ ကျော်) ပြည့်တဲ့ Anniversary လေးပါ။"
         },
         {
             emoji: "⏳",
-            text: "အတူတူဖြတ်သန်းခဲ့တဲ့ အချိန်တိုင်းမှာ အခက်အခဲတွေ ရှိခဲ့ပေမယ့် စုစုနဲ့ အတူတူရှိနေရတာဟာ ကိုးကိုအတွက်တော့ပျော်ဆုံးပါဗျာ အပျော်ဆုံးပဲ။"
+            text: "အတူတူဖြတ်သန်းခဲ့တဲ့ အချိန်တိုင်းမှာ အခက်အခဲတွေ ရှိခဲ့ပေမယ့် စုနဲ့တူတူရှိနေရတာဟာ ကို့တွက် အပျော်ဆုံးပဲ။"
         },
         {
             emoji: "🥰",
-            text: "ကိုးကိုကိုအရိပ်တကြည့်"ဂရုစိုကပေးပြီးးအမြဲရှိေေးလို့ ကျေးဇူးအများကြီးတင်ပါတယ်နော်။"
+            text: "ကို့ကို ဂရုစိုက်ပေးပြီး အမြဲနားလည်ပေးလို့လည်း ကျေးဇူးအများကြီးတင်ပါတယ်နော်။"
         },
         {
             emoji: "💍",
@@ -112,7 +104,7 @@
         } else {
             currentStep = 0;
             document.getElementById('emojiDisplay').textContent = "🌹";
-            document.getElementById('textDisplay').textContent = "ချစ်တုံးလေးရေ ကိုးကို ကစုစုကို စိတ်ကောက်အောင်ထားတာဟုတ်ပါဘူးဗျာ ကိုးကိုမှာစီစဉ်ရှိပြီးသားပါဗျာချစ်တုံးလေးရေ ကိုးကို ကစုစုကို စိတ်ကောက်အောင်ထားတာဟုတ်ပါဘူးဗျာ ကိုးကိုမှာစီစဉ်ရှိပြီးသားပါဗျာ";
+            document.getElementById('textDisplay').textContent = "";
             document.getElementById('nextBtn').textContent = "ရှေ့ဆက်သွားရန် ❤️";
         }
     }
